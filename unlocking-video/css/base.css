@@ -52,7 +52,7 @@ table {
 
 body {
 	background-color: #555;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 20px;
 	font-family: DejaVuSansBook, sans-serif;
 }
@@ -95,6 +95,24 @@ body {
 		display: block;
 	}
 
+	.slide h3 {
+		color: #ddd;
+		line-height: 40px;
+		font-size: 24px;
+		font-family: DejaVuSansBook, sans-serif;
+		text-align: center;
+		display: block;
+	}
+
+	.slide ul.contents {
+		border-left: solid 2px #ddd;
+		padding-left: 20px;
+		display: block;
+		width: 200px;
+		margin: 10px auto;
+		text-align: left;
+	}
+
 	.slide a:link {
 		text-decoration: none;
 		color: #fff;
@@ -110,8 +128,14 @@ body {
 	}
 
 	.slide p {
-		text-align: center;
-		margin: 20px 0;
+		text-align: left;
+		max-width: 600px;
+		display: block;
+		margin: 20px auto;
+	}
+
+	.slide em {
+		font-family: DejaVuSansOblique, sans-serif;
 	}
 
 .nav-pager {
