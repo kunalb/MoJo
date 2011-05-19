@@ -1,0 +1,67 @@
+<!DOCTYPE HTML5>
+
+<html>
+
+<head>
+	<title>Mozilla Knight Challenge #1 -- Unlocking Video</title>
+	<link type = 'text/css' href = 'css/base.css' rel = 'stylesheet' />
+	<link type = 'text/css' href = 'fonts/stylesheet.css' rel = 'stylesheet' />
+	<script type = 'text/javascript' src = 'js/jquery.js'></script>
+	<script type = 'text/javascript' src = 'js/jquery.presentation.js'></script>
+	<script type = 'text/javascript' src = 'js/base.js'></script>
+</head>
+
+<body>
+
+<div id = 'slides'>
+	<div class = 'slide'>
+		<h1>Mo(zilla) Jo(urnalism)</h1>
+		<h2>Challenge #1&mdash;Unlocking Video</h2>
+
+		<p>As an engineering student my approach to the challenge is along the lines of what could be technically achieved by mixing various web based technologies rather than from inside a newsroom&mdash;which is beyond my experience.</p>
+
+		<p>This presentation is a combination of ideas, as there are too many inter-connected aspects of re-imagining news videos to neatly break them down. I've divided it on the basis of what stage the video happens to be at.</p>
+
+		<h3>Contents</h2>
+		<ul class = 'contents'>
+			<li><a href = '#2'>Sourcing Material</a></li>
+			<li><a href = '#3'>Creation</a></li>
+			<li><a href = '#4'>Consumption</a></li>
+			<li><a href = '#'>Proof of Concept</a></li>
+		</ul>
+
+		<p style='text-align:right'>By <a href = 'mailto:me@kunal-b.in'>Kunal Bhalla</a><br />
+	</div>
+	<div class = 'slide'>
+		<h1>Sourcing Material</h1>
+		<p>As recent events in Egypt and around the world have shown, citizen journalism -- a socialized form of news can be extremely effective. Not using the hundreds of thousands of cameras around the world to spread news and stories would be a rather major waste.</p>
+		<p>Videos can be either professionally shot by news channels themselves or sourced from appropriately licensed citizen journalists videos--any video meant to tell a story/spread information can no longer be just a sequence of images, rather:</p>
+			<ul>	
+				<li>Save metadata from while shooting the video: while it is possible to later extract large amounts of information from videos based on discussions on the MoJo mailgroup/etherpad, there is nothing that can be as accurate as the data collected at that point of time. Information to store includes:
+				<ul>
+					<li>Location/geodata--particularly from smartphones</li>
+					<li>People within the videos--face recognition+social network API+resources for auto tagging</li>
+					<li>Time of shoot, weather conditions</li>
+					<li>Who actually shot the video</li>
+					<li>Tags by people who made the video</li>
+				</ul>
+				Of course, all information must be opt in to avoid privacy concerns. This meta-data can probably be passed along as a json object with a predefined format.
+				</li>
+			</ul>
+		<p>Create special news app applications to allow recording videos, adding tags and other meta information as painlessly and intuitively as possible and share--hosted on both news websites and public servers.</p>
+		<p>Create an extension to <a href = 'http://status.net'>Status.net</a> to allow sharing news videos in a twitter like feed--decentralized servers, easily follow/unfollow other users.</p>
+		<p>Create plugins/extensions for popular blogging platforms like WordPress to allow spreading a new standard for video.</p>
+	</div>
+	<div class = 'slide'>
+		<p>Collecting videos, is of course--only the first part of the process--the harder part is making the large amounts of raw data coherent, useful and also to validate them--this is particularly where the news organizations come in.</p>
+		<p>A news story can no longer be a simple video with an anchor introducing the topics covered with mini interviews--instead 
+	</div>
+	<div class = 'slide'>
+		<h1>Colophon</h1>
+		<p>This presentation was made on <a href = 'http://vim.org'>gVim</a> and runs using the awesome <a href = 'http://jquery.com'>jQuery</a> Javascript Library supported by the <a href = 'http://www.viget.com/inspire/jquery-presentation-plugin/'>jQuery Presentation Plugin</a> by Trevor Davis.</p>
+	</div>
+</div>
+
+</body>
+
+</html>
