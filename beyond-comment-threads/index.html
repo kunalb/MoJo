@@ -19,6 +19,12 @@
 		<h2>Challenge #2&mdash;Beyond Comment Threads</h2>
 
 		<h3>Contents</h2>
+		<ul>
+			<li><a href = "#2">Introduction</a></li>
+			<li><a href = "#3">An Ideal Commenting System</a></li>
+			<li><a href = "#4">Technical Aspects</a></li>
+			<li><a href = "#5">tl;dr</a></li>
+		</ul>
 
 		<p style='text-align:right'>By <a href = 'mailto:me@kunal-b.in'>Kunal Bhalla</a><br />
 	</div>
@@ -26,7 +32,7 @@
 	<div class = 'slide'>
 		<h1>Introduction</h1>
 
-		<p>In this presentation I'm aiming at addressing modifying how discussions around news articles are created and moderated from a technical and user-oriented point of view. I'd rather clarify this up front based on the recent discussions on the Mozilla forums.</p>
+		<p>In this presentation I'm aiming at addressing modifying how discussions around news articles are created and moderated from a technical and user-oriented point of view. I'd decided to clarify this up front based on the recent discussions on the Mozilla forums.</p>
 
 		<p>My response to this challenge centers around using existing communities to create meaningful and useful discussions around content in an open, distributed manner using mostly existing technologies.</p>
 
@@ -34,7 +40,58 @@
 	</div>
 
 	<div class = 'slide'>
-		<h1>What an ideal commenting system would look like</h1>
+		<h1>An ideal commenting system</h1>
+
+		<p>The article is treated as a first-among-equals on a topic: as much emphasis is given to the discussion as to the article itself.</p>
+
+		<p>Every user has his own preferences about communities he joins, posts made&mdash;and if that particular community supports it&mdash;gains reputation for his comments. An ideal commenting system would automatically take a user's preferences into account by simply gauging which communities he is a part of (a simple check by seeing where all he is logged in) accordingly determining the user's interests and reorganizing comments accordingly: you get to see what you are most likely interested in.</p>
+
+		<p>Comments get auto-tagged, and can be also custom tagged by the commentors themselves. A large problem in active discussions is reading and discussing those aspects of an article you want&mdash;thousands of comments simply get lost in the ether because they don't appear on the front page&mdash;tagging lets you reach where you want quickly.</p>
+
+		<p>Comments can be blog posts, tweets, videos, sound files, pictures made through the platform of the user's choice without having to leave the original article; they get aggregated and displayed live on the article. There's nothing that can reduce enthusiasm about posting than having to constantly refresh the page to see new comments and replies.</p>
+		
+		<p>Facebook gained a lot of traction by adding the live-stream and notifications&mdash;having a way to notify users that someone replied to their comment would be really help help in engaging users.</p>
+
+		<p>Comment quality can be improved by suggesting grammar/spelling corrections, instantaneous translation of any comment/the article itself; and ensuring that any comments shown within the site follow full accessibility guidelines.</p>
+
+		<p>Atomic comments (comments on specific parts of an article) would, in my opinion, completely break the flow of a user reading the article. Instead, allow quoting the article/comments as simple as possible.</p>
+
+		<p>Last, but not the least I would emphasize a highly simple non-overwhelming UI&mdash;design so good that the user does not notice it.</p>
+	</div>
+
+	<div class = 'slide'>
+		<h1>Technical Aspects</h1>
+
+		<p>Auto determining where all a user is logged in can be determined using a, well, exploit detailed at <a href="https://grepular.com/Abusing_HTTP_Status_Codes_to_Expose_Private_Information">Grepular</a> by Mike Cardwell without actually saving any information about the user. To ensure user privacy, I would recommend that comment reordering be carried out client side only and be opt-in&mdash; that way any information about the user's communities is never sent back to the main server. A completely open source implementation of the comments system should also take care of any worries about security. With enough traction it might also be possible to ask communities to release a formal API that can be enabled so that only those sites that a user wants to show he is logged in to actually come up.</p>
+
+		<p>Gaining karma and commenting directly through the article would depend on the communities involved and special permissions&mdash;a rather large amount of work would be required to make this as unobstrusive as possible.</p>
+
+		<p>Ajax, server pushes, etc can allow live comments to show live updates on an article. Tagging can be carried out using any of the many context-extraction services available.</p>
+
+		<p>Notifications can be handled by a simple Firefox/Chrome/&lt;Any Browser&gt; plugin&mdash;a central server for storing notifications for users to allow logging in from any device of their choice (perhaps piggy backing on how Firefox syncs browser information) that show a number indicating replies and an easy way to go back to old comments.</p>
+
+		<p>Comment quality can be improved by integrating the open source project <a href = "http://afterthedeadline.com/">After the deadline</a> which is already available as a browser plugin and can be integrated into any website. Translations can be handled using google translate and various other API. Accessibility can be considered by following the <a href = "http://www.w3.org/WAI/intro/aria.php">WAI-ARIA</a> guidelines.</p>
+
+		<p>Quoting would be a simple matter of javascript to highlight the sentence a user is hovering on, etc.</p>
+
+		<p>Unobstrusive design, of course would require a lot of testing, suggestions from the user&mdash;something along the lines of, but perhaps not the scale of, the firefox UI design work.</p>
+	</div>
+
+	<div class = 'slide'>
+		<h1>tl;dr</h1>
+		
+		<ul>
+			<li>The article is treated as a 'first-among-equal', with only slightly larger emphasis on article.</li>
+			<li>Comments are tagged and reorganized based on a user's communities.</li>
+			<li>Commenting and discussion work across communities and reward a user within his community.</li>
+			<li>Live commenting, with ajax-y updates.</li>
+			<li>Notifications about replies using a firefox/chrome plugin.</li>
+			<li>Enhance comment quality using after the deadline.</li>
+			<li>Include the ability to translate comments/the article using various available APIs.</li>
+			<li>Allow comments to be videos, sound files, pictures, anything.</li>
+			<li>Simplify quoting from the article and comments as far as possible.</li>
+			<li>Unobstrusive and intuitive design which doesn't overwhelm the user in any way.</li>
+		</ul>
 	</div>
 </div>
 

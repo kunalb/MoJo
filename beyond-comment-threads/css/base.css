@@ -113,6 +113,12 @@ body {
 		text-align: left;
 	}
 
+	.slide ul {
+		max-width: 800px;
+		margin: 10px auto;
+		list-style-type: square;
+	}
+
 	.slide a:link {
 		text-decoration: none;
 		color: #fff;
@@ -129,7 +135,7 @@ body {
 
 	.slide p {
 		text-align: left;
-		max-width: 600px;
+		max-width: 850px;
 		display: block;
 		margin: 20px auto;
 	}
