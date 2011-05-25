@@ -9,48 +9,48 @@ broken down as: (I hope the following ASCII diagram survives email clients)
 Note: The numbers indicated are for labelling the stages, and are not really
 indicative of any ordering.
 
-------------------------------------------------------------------------------
-                                        |
-1)                                      |
-Inception of an idea with a lot of back |
-and forth between the editors and       | 2)
-journalists.                            | Start obtaining photos
-                                        |
-3)                                      | 4)
-The journalist starts working on his    | Contact media department/devs
-report, contacting resources, etc.      | for visualizations, media.
-                                        | 
-5)			                | 7) Visualizations, media prepared
-The reporter remains in contact with    |    according to data provided by
-the editor about changes made to the    |    the reporter.
-story and discuss it.                   |
-					|
-6)                                      |
-The story might be discussed once again |
-a few hours before the finishing time.  |
-					| 9) 
-8)                                      | Somewhere around this point the 
-The reporter files the story and        | designers/devs submit requested
-informs the editor, who reviews and     | media.
-forwards it to the copy editor. Back    |
-and forth between the editors and       | (Not necessarily approved/reviewed
-journalist.                             |  by the editor or the journalist)
-					|
-------------------------------------------------------------------------------					
+	------------------------------------------------------------------------------
+						|
+	1)                                      |
+	Inception of an idea with a lot of back |
+	and forth between the editors and       | 2)
+	journalists.                            | Start obtaining photos
+						|
+	3)                                      | 4)
+	The journalist starts working on his    | Contact media department/devs
+	report, contacting resources, etc.      | for visualizations, media.
+						| 
+	5)			                | 7) Visualizations, media prepared
+	The reporter remains in contact with    |    according to data provided by
+	the editor about changes made to the    |    the reporter.
+	story and discuss it.                   |
+						|
+	6)                                      |
+	The story might be discussed once again |
+	a few hours before the finishing time.  |
+						| 9) 
+	8)                                      | Somewhere around this point the 
+	The reporter files the story and        | designers/devs submit requested
+	informs the editor, who reviews and     | media.
+	forwards it to the copy editor. Back    |
+	and forth between the editors and       | (Not necessarily approved/reviewed
+	journalist.                             |  by the editor or the journalist)
+						|
+	------------------------------------------------------------------------------					
 
-10) 
-Paginator 'fits' the story into available space using available infographics,
-photographs with back and forth with the journalist to strech or crop the 
-article.
+	10) 
+	Paginator 'fits' the story into available space using available infographics,
+	photographs with back and forth with the journalist to strech or crop the 
+	article.
 
-11)
-The story finally goes for printing and is exported (somehow) to the website
-(either by hand or by using a software, etc.)
+	11)
+	The story finally goes for printing and is exported (somehow) to the website
+	(either by hand or by using a software, etc.)
 
-12)
-**REPEAT FROM 1**
+	12)
+	**REPEAT FROM 1**
 
-------------------------------------------------------------------------------
+	------------------------------------------------------------------------------
 
 I hope I've understood the workflow more or less correctly. Issues raised about
 really being able to hack on this workflow involve getting this tech adopted,
@@ -116,9 +116,11 @@ can be broken down into, and solved by using a variation of tech.:
 	infographics that can be directly created by journalists without 
 	having to touch a line of code.
 
-   With fine grained permissions, large parts of the history of an article
-   can be made public for comments, further discussion and possibly newspaper
-   articles.
+	With fine grained permissions, large parts of the history of an article
+	can be made public for comments, further discussion and possibly newspaper
+	articles--essentially allowing anyone to contribute to a paper and perhaps
+	change the way news is published: crowd sourced information edited, verified 
+	and published.
 
       3. Content Exporter/Importer: A way to move the standard format to any
          of the CMS's; say, for example a WordPress importer. The same article
@@ -126,7 +128,14 @@ can be broken down into, and solved by using a variation of tech.:
 	 to name as required.
 
 This is just an initial draft written by me while almost falling asleep, so 
-please forgive typos, etc. What do you think--have I covered most of the 
+please forgive typos, etc. I need to go into a bit more detail about how
+anyone apart from those directly involved in the workflow can contribute.
+
+What do you think--have I covered most of the 
 requirements--suggestions, technical and otherwise?
 
 -Kunal
+
+PS I've uploaded a text version of this at 
+<https://github.com/kunalb/MoJo/blob/gh-pages/people-powered-news/mojo-notes.md> 
+incase the formatting gets too messed up.
