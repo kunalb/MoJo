@@ -20,7 +20,7 @@
 
 		<h3>Contents</h2>
 		<ul>
-			<li><a href = "#2">Hacking The Newsroom</a></li>
+			<li><a href = "#2">Hacking Into The Newsroom</a></li>
 			<li><a href = "#3">A general format</a></li>
 			<li><a href = "#4">New tools (1) Collaborative Editor</a></li>
 			<li><a href = "#5">New tools (2) Visualization Creator</a></li>
@@ -32,7 +32,7 @@
 	</div>
 
 	<div class = 'slide'>
-		<h1>Hacking The Newsroom</h1>
+		<h1>Hacking Into The Newsroom</h1>
 		<p>This idea began with a <a href = 'https://groups.google.com/forum/#!topic/mozilla.community.mojo/nsxBNCEVx_E'>discussion</a> on the <a href = 'https://lists.mozilla.org/listinfo/community-mojo'>MoJo mailing list</a> about how the challenge could be used to find solutions for what could be done in the newsroom.</p>
 
 		<p>As a response to my question about what exactly went on in newsrooms, <a href ='https://groups.google.com/d/msg/mozilla.community.mojo/nsxBNCEVx_E/trsQ8T8JijUJ'>Ian</a> and <a href = 'https://groups.google.com/d/msg/mozilla.community.mojo/nsxBNCEVx_E/_N2QmQYW-z4J'>Jake</a> gave detailed replies about their daily workflow, with a lot of feedback from others. <a href = 'https://groups.google.com/d/msg/mozilla.community.mojo/Xp5Nhd5Bp8Y/NUunYt3AZz0J'>Bill</a> also has been giving feedback from a newsroom perspective. Jake and Adam talked about the need for and <a href = 'http://www.iptc.org/site/News_Exchange_Formats/IPTC_G2-Standards_-_about_which_one_do_you_want_to_know_more'>existing standards</a> for news publishing.</p>
@@ -43,28 +43,67 @@
 			<li>There are many existing workflows, custom/proprietary CMSs being used in newsrooms at various scales. Any usable solution would have to be usable in <em>parts</em>, to allow easy integration.</li>
 			<li>Being able to share the data from one application to the next as well as between content publishers requires a standardized format.</li>
 			<li>Social Features to allow people to comment and discuss an article in progress.</li>
-			<li>Hacking into the existing workflow for collaborative editing and creating visualizations.</p>
+			<li>Hacking into the existing workflow for collaborative editing and creating visualizations.</li>
 		</ul>
 	</div>
 
 	<div class = 'slide'>
 		<h1>A General Format</h1>
+		<p>Sharing news between various tools requires a custom format that is simple to parse and create. There are various existing formats, as was pointed out Adam: <a href = "http://www.iptc.org/site/News_Exchange_Formats/IPTC_G2-Standards_-_about_which_one_do_you_want_to_know_more">IPTC GT</a>.</p>
+		<p>Having a neatly defined format would allow moving between all sorts of software simpler and also allow creation of fairly interesting apps on top of released news data from various sources. (In order to address issues about how publishing houses would treat releasing data, perhaps the API could be released in a pay-for-access format.)</p> 
+		<p>Apart from handling news metadata and content (specified in a much better way in the IPTC G2 format), more metadata any chosen format can have is:
+
+		<ul>
+			<li>Versioning: A way to simply version the documents. I'd suggest using a git derived snapshot format: link to the previous version of the article if unchanged, or a completely new snapshot in case of a change. This will keep the document relatively smaller and still maintain readability.</p>
+			<li>Access rights: What levels of users should be able to access and modify this document? Editors, journalists or subscribers?</li>
+			<li>Comments and discussion on the document: perhaps again in a recursive format or another copy of the document itself.</li>
+			<li>Support for auto-aggregated data sources, such as Tweets.</li>
+		</ul>
+			
 	</div>
 
 	<div class = 'slide'>
 		<h1>New Tools (1) Collaborative Editor</h1>
+
+		<p>Based on the workflow Ian posted, an HTML5 based collaborative editor that works across browsers and devices that allows creating from and reading the given content as well as publishing the article to various CMS's would be able to fit into a journalist's daily workflow.</p>
+
+		<p>Essentially, the application must allow users to:</p>
+		<ul>
+			<li>Edit the document collaboratively, recording who contributed what with full support for attachments and editing of different types of media.</li>
+			<li>Allow "committing" versions, choosing whether they can be released publicly, are private, etc.</li>
+			<li>Supports aggregation of data from various web based APIs.</li>
+			<li>Can import and export data from open source CMSs.</li>
+			<li>The client runs directly on the web in any browser on any device (a complete web application; perhaps backed by Cappuccino or other javascript libraries)</li>
+			<li>Easily installable and pluggable backend such that it can be easily integrated into existing workflows one step at a time.</li>
+		</ul>
 	</div>
 
 	<div class = 'slide'>
 		<h1>New Tools (2) Visualization Creator</h1>
+
+		<p>A stand alone GUI based visualization creator that allows creating interactive visualizations based on data without having to write a line of code.</p>
+
+		<p>Implementable using Cappuccino and the many available visualization frameworks (such as <a href = 'vis.stanford.edu/protovis/'>protovis</a>).</p>
 	</div>
 
 	<div class = 'slide'>
 		<h1>Crowdsourcing/Social News</h1>
+
+		<p>Publishing revisions of the document, and perhaps the initial idea as well with the references will allow interested people to comment and improve an article by crowdsourcing copy editing; double checking facts and adding even more information.</p>
+
+		<p>Allowing easy sharing and discussions around versions (perhaps using solutions from Challenge #2) would further allow refining a piece with feedback from a lot of people. Images, visualizations can also be crowdsourced by providing incentives in terms of recognition, perhaps awards, etc.</p> 
 	</div>
 
 	<div class = 'slide'>
 		<h1>tl;dr</h1>
+
+		<p>A short summary:</p>
+		<ul>
+			<li>Create a standard format supporting all requirements (access control, revisions, et al).</li>
+			<li>A collaborative editor that works across browsers and devices that can be easily integrated into existing newsroom workflows.</li>
+			<li>A GUI visualization creator that allows creating visualizations using existing libraries without writing code.</li>
+			<li>Allowing the editor (as in, the online collaborative editor) to publish specific versions of the document to get feedback.</li>
+		</ul>
 	</div>
 </div>
 
